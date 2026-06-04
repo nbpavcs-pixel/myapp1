@@ -1,47 +1,131 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Webex Meeting Links</title>
+    <title>Maths Tution </title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fa;
+        }
+
+        /* Header */
+        .header {
+            background: #0052cc;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        /* Logout Button */
+        .logout-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .logout-btn:hover {
+            background: #b02a37;
+        }
+
+        /* Main Container */
+        .container {
+            width: 70%;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .container h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        /* Meeting Cards */
+        .meeting {
+            background: #eef4ff;
+            margin: 15px 0;
+            padding: 18px;
+            border-left: 5px solid #0052cc;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .meeting:hover {
+            transform: translateX(5px);
+            background: #dde9ff;
+        }
+
+        .meeting a {
+            text-decoration: none;
+            color: #0052cc;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: gray;
+            font-size: 14px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>My Webex Sessions</h1>
 
-    <ul>
-        <li>
-            <a href="https://meet1753323025228-1602.webex.com/meet/pr26418454614">
-                Session 1 - Maths Class
+    <div class="header">
+        <h1>📚 Links for Attending Classes</h1>
+
+        <button class="logout-btn"
+                onclick="window.location.href='/logout'">
+            Logout
+        </button>
+    </div>
+
+    <div class="container">
+        <h2>Available Classes</h2>
+
+        <div class="meeting">
+            <a href="https://meet1753323025228-1602.webex.com/meet/pr26418454614" target="_blank">
+                📐 Session 1 - Maths Class
             </a>
-        </li>
+        </div>
 
-        <li>
+        <div class="meeting">
             <a href="https://yourcompany.webex.com/meet/session2" target="_blank">
-                Session 2 - Physics Class
+                ⚛️ Session 2 - Physics Class
             </a>
-        </li>
+        </div>
 
-        <li>
+        <div class="meeting">
             <a href="https://yourcompany.webex.com/meet/session3" target="_blank">
-                Session 3 - CHemistry Class
+                🧪 Session 3 - Chemistry Class
             </a>
-        </li>
-    </ul>
-<style>
-.logout-btn {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-}
+        </div>
 
-.logout-btn:hover {
-    background-color: darkred;
-}
-</style>
-<button onclick="window.location.href='/logout'">
-    Logout
-</button>
- 
+        <div class="footer">
+            Click on a session to join the Webex meeting.
+        </div>
+    </div>
+
 </body>
 </html>
