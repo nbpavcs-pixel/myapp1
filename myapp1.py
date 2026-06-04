@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, session
+ from flask import Flask, render_template, request, redirect, session
 import sqlite3
 
 app = Flask(__name__)
@@ -28,7 +28,7 @@ create_db()
 
 @app.route('/')
 def home():
-    return render_template("loginpage.html")
+    return render_template("login.html")
 
 @app.route('/login', methods=['POST'])
 def login():
@@ -63,8 +63,8 @@ def dashboard():
 
 @app.route('/logout')
 def logout():
-    session.clear()
-    return redirect('/')
-
+    session.clear()   # Removes all session data
+    return "Logged out successfully"
+      
 if __name__ == '__main__':
     app.run(debug=True)
